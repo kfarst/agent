@@ -17,18 +17,23 @@ public class Agent {
    * Members
    */
 
-  var request: NSMutableURLRequest
+  var base: NSURL?
+  var request: NSMutableURLRequest?
   let queue = NSOperationQueue()
 
   /**
    * Initialize
    */
+  
+  init(base: String) {
+    self.base = NSURL(string: base)
+  }
 
   init(method: String, url: String, headers: Headers?) {
     self.request = NSMutableURLRequest(URL: NSURL(string: url)!)
-    self.request.HTTPMethod = method;
+    self.request!.HTTPMethod = method
     if (headers != nil) {
-      self.request.allHTTPHeaderFields = headers!
+      self.request!.allHTTPHeaderFields = headers!
     }
   }
 
