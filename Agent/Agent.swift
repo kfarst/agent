@@ -18,6 +18,7 @@ public class Agent {
    */
 
   var base: NSURL?
+  var headers: Dictionary<String, String>?
   var request: NSMutableURLRequest?
   let queue = NSOperationQueue()
 
@@ -25,16 +26,44 @@ public class Agent {
    * Initialize
    */
   
-  init(base: String) {
-    self.base = NSURL(string: base)
+  init(url: String, headers: Dictionary<String, String>?) {
+    self.base = NSURL(string: url)
+    self.headers = headers
+  }
+  
+  convenience init(url: String) {
+    self.init(url: url, headers: nil)
   }
 
-  init(method: String, url: String, headers: Headers?) {
-    self.request = NSMutableURLRequest(URL: NSURL(string: url)!)
-    self.request!.HTTPMethod = method
-    if (headers != nil) {
-      self.request!.allHTTPHeaderFields = headers!
+  init(method: String, url: String, headers: Dictionary<String, String>?) {
+    self.headers = headers
+    self.request(method, path: url)
+  }
+  
+  convenience init(method: String, url: String) {
+    self.init(method: method, url: url, headers: nil)
+  }
+  
+  /**
+   * Request
+   */
+  
+  func request(method: String, path: String) -> Agent {
+    var u: NSURL
+    if self.base != nil {
+      u = self.base!.URLByAppendingPathComponent(path)
+    } else {
+      u = NSURL(string: path)!
     }
+
+    self.request = NSMutableURLRequest(URL: u)
+    self.request!.HTTPMethod = method
+    
+    if self.headers != nil {
+      self.request!.allHTTPHeaderFields = self.headers
+    }
+    
+    return self
   }
 
   /**
@@ -55,6 +84,10 @@ public class Agent {
 
   public class func get(url: String, headers: Headers, done: Response) -> Agent {
     return Agent.get(url, headers: headers).end(done)
+  }
+  
+  public func get(url: String, done: Response) -> Agent {
+    return self.request("GET", path: url).end(done)
   }
 
   /**
@@ -89,6 +122,10 @@ public class Agent {
     return Agent.post(url, headers: headers, data: data).send(data).end(done)
   }
 
+  public func POST(url: String, data: AnyObject, done: Response) -> Agent {
+    return self.request("POST", path: url).send(data).end(done)
+  }
+
   /**
    * PUT
    */
@@ -120,6 +157,10 @@ public class Agent {
   public class func put(url: String, headers: Headers, data: AnyObject, done: Response) -> Agent {
     return Agent.put(url, headers: headers, data: data).send(data).end(done)
   }
+  
+  public func PUT(url: String, data: AnyObject, done: Response) -> Agent {
+    return self.request("PUT", path: url).send(data).end(done)
+  }
 
   /**
    * DELETE
@@ -141,6 +182,10 @@ public class Agent {
     return Agent.delete(url, headers: headers).end(done)
   }
 
+  public func delete(url: String, done: Response) -> Agent {
+    return self.request("DELETE", path: url).end(done)
+  }
+
   /**
    * Methods
    */
@@ -149,12 +194,12 @@ public class Agent {
     var error: NSError?
     let json = NSJSONSerialization.dataWithJSONObject(data, options: nil, error: &error)
     self.set("Content-Type", value: "application/json")
-    self.request.HTTPBody = json
+    self.request!.HTTPBody = json
     return self
   }
 
   func set(header: String, value: String) -> Agent {
-    self.request.setValue(value, forHTTPHeaderField: header)
+    self.request!.setValue(value, forHTTPHeaderField: header)
     return self
   }
 
@@ -172,7 +217,7 @@ public class Agent {
       let res = response as! NSHTTPURLResponse
       done(res, json, error)
     }
-    NSURLConnection.sendAsynchronousRequest(self.request, queue: self.queue, completionHandler: completion)
+    NSURLConnection.sendAsynchronousRequest(self.request!, queue: self.queue, completionHandler: completion)
     return self
   }
 
