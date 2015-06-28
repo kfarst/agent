@@ -22,7 +22,7 @@ required parameters when first creating the request. There are usually multiple
 degrees of overloading.
 
 ```swift
-let done = { (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> Void in
+let done = { (response: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
   // react to the result of your request
 };
 Agent.post("http://example.com", headers: [ "Header": "Value" ],
@@ -39,7 +39,7 @@ more expressive code.
 ```swift
 Agent.post("http://example.com")
   .send([ "Key": "Value" ])
-  .end({ (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> Void in
+  .end({ (response: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
     // react to the result of your request
   }
 )
@@ -67,7 +67,7 @@ let done = { (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) 
 
 ```swift
 let req = Agent.get("http://example.com")
-req.end({ (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> Void in
+req.end({ (response: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
   // react to the result of your request
 })
 ```
@@ -77,7 +77,7 @@ req.end({ (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> 
 ```swift
 let req = Agent.post("http://example.com")
 req.send([ "Key": "Value" ])
-req.end({ (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> Void in
+req.end({ (response: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
   // react to the result of your request
 })
 ```
@@ -87,7 +87,7 @@ req.end({ (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> 
 ```swift
 let req = Agent.put("http://example.com")
 req.send([ "Key": "Value" ])
-req.end({ (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> Void in
+req.end({ (response: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
   // react to the result of your request
 })
 ```
@@ -96,14 +96,14 @@ req.end({ (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> 
 
 ```swift
 let req = Agent.delete("http://example.com")
-req.end({ (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> Void in
+req.end({ (response: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
   // react to the result of your request
 })
 ```
 
 ### Methods
 
-#### ```send(data: Dictionary<String, AnyObject>) -> Agent```
+#### ```send(data: AnyObject) -> Agent```
 
 Will JSON serialize any ```data``` and send it along as the HTTP body. Also
 implicitly sets the ```Content-Type``` header to ```application/json```.
@@ -112,7 +112,7 @@ implicitly sets the ```Content-Type``` header to ```application/json```.
 
 Sets the HTTP ```header``` to ```value```.
 
-#### ```end(done: (response: NSHTTPURLResponse!, data: Agent.Data!, error: NSError!) -> Void) -> Agent```
+#### ```end(done: Response) -> Agent```
 
 Will start the request and call ```done``` when it's complete.
 
