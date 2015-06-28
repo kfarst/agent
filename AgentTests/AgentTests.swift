@@ -40,7 +40,7 @@ class AgentTests: XCTestCase {
     }
     Agent.get("https://api.github.com/", done: done)
     waitFor(&wait)
-  }
+}
 
   func testGetShouldFail () {
     var wait: Bool = true
@@ -61,7 +61,7 @@ class AgentTests: XCTestCase {
     Agent.post("http://nope.example.com", done: done)
     waitFor(&wait)
   }
-  
+
   func testPutShouldFail () {
     var wait: Bool = true
     let done = { (_: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
@@ -69,16 +69,6 @@ class AgentTests: XCTestCase {
       wait = false
     }
     Agent.put("http://nope.example.com", done: done)
-    waitFor(&wait)
-  }
-  
-  func testDeleteShouldFail () {
-    var wait: Bool = true
-    let done = { (_: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
-      XCTAssertNotNil(error)
-      wait = false
-    }
-    Agent.delete("http://nope.example.com", done: done)
     waitFor(&wait)
   }
 
