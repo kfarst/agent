@@ -12,6 +12,7 @@ public class Agent {
 
   public typealias Headers = Dictionary<String, String>
   public typealias Response = (NSHTTPURLResponse?, AnyObject?, NSError?) -> Void
+  public typealias RawResponse = (NSHTTPURLResponse?, NSData?, NSError?) -> Void
 
   /**
    * Members
@@ -190,12 +191,16 @@ public class Agent {
    * Methods
    */
 
+  public func data(data: NSData?, mime: String) -> Agent {
+    self.set("Content-Type", value: mime)
+    self.request!.HTTPBody = data
+    return self
+  }
+  
   public func send(data: AnyObject) -> Agent {
     var error: NSError?
     let json = NSJSONSerialization.dataWithJSONObject(data, options: nil, error: &error)
-    self.set("Content-Type", value: "application/json")
-    self.request!.HTTPBody = json
-    return self
+    return self.data(json, mime: "application/json")
   }
 
   public func set(header: String, value: String) -> Agent {
@@ -216,6 +221,18 @@ public class Agent {
       }
       let res = response as! NSHTTPURLResponse
       done(res, json, error)
+    }
+    NSURLConnection.sendAsynchronousRequest(self.request!, queue: self.queue, completionHandler: completion)
+    return self
+  }
+  
+  public func raw(done: RawResponse) -> Agent {
+    let completion = { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+      if error != .None {
+        done(.None, data, error)
+        return
+      }
+      done(response as? NSHTTPURLResponse, data, error)
     }
     NSURLConnection.sendAsynchronousRequest(self.request!, queue: self.queue, completionHandler: completion)
     return self
