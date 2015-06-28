@@ -190,7 +190,7 @@ public class Agent {
    * Methods
    */
 
-  func send(data: AnyObject) -> Agent {
+  public func send(data: AnyObject) -> Agent {
     var error: NSError?
     let json = NSJSONSerialization.dataWithJSONObject(data, options: nil, error: &error)
     self.set("Content-Type", value: "application/json")
@@ -198,12 +198,12 @@ public class Agent {
     return self
   }
 
-  func set(header: String, value: String) -> Agent {
+  public func set(header: String, value: String) -> Agent {
     self.request!.setValue(value, forHTTPHeaderField: header)
     return self
   }
 
-  func end(done: Response) -> Agent {
+  public func end(done: Response) -> Agent {
     let completion = { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
       if error != .None {
         done(.None, data, error)

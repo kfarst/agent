@@ -71,5 +71,27 @@ class AgentTests: XCTestCase {
     Agent.put("http://nope.example.com", done: done)
     waitFor(&wait)
   }
+  
+  func testShouldOverload () {
+    var wait: Bool = true
+    let done = { (_: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
+      XCTAssertNotNil(error)
+      wait = false
+    }
+    Agent.post("http://example.com", headers: [ "Header": "Value" ], data: [ "Key": "Value" ], done: done)
+    waitFor(&wait)
+  }
+
+  func testShouldMethodChain () {
+    var wait: Bool = true
+    let done = { (_: NSHTTPURLResponse?, data: AnyObject?, error: NSError?) -> Void in
+      XCTAssertNotNil(error)
+      wait = false
+    }
+    Agent.post("http://example.com")
+      .send([ "Key": "Value" ])
+      .end(done)
+    waitFor(&wait)
+  }
 
 }
