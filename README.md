@@ -2,11 +2,11 @@
 
 Minimalistic Swift HTTP request agent for iOS and OS X.
 
-Agent provides an API that lets you easily and worry free craft HTTP requests primarily to JSON based web services. While Agent is mainly for JSON it also lets you send and access the raw data of a request and response. However if you are looking for a more feature complete library please take a look at [Alamofire](https://github.com/Alamofire/Alamofire).
-
 ## Introduction
 
 This is a tiny framework that gives you nice a API for crafting HTTP requests.
+
+While Agent is mainly for JSON it also lets you send and access the raw data of a request and response. However if you are looking for a more feature complete library please take a look at [Alamofire](https://github.com/Alamofire/Alamofire).
 
 ## Usage
 
