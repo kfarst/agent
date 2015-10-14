@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A16D93E1B3FECCE0002BD69 /* Agent.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8A16D93D1B3FECCE0002BD69 /* Agent.podspec */; };
-		8A90A2AD193D5613001D7C92 /* Agent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A90A2A1193D5613001D7C92 /* Agent.framework */; };
-		8A90A2B4193D5613001D7C92 /* AgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90A2B3193D5613001D7C92 /* AgentTests.swift */; };
-		8A90A2C0193D566E001D7C92 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90A2BF193D566E001D7C92 /* Agent.swift */; };
+		253586771BCEE9AB00C7E11D /* Agent+PromiseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253586761BCEE9AB00C7E11D /* Agent+PromiseKit.swift */; };
+		8A16D93E1B3FECCE0002BD69 /* Agent+PromiseKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8A16D93D1B3FECCE0002BD69 /* Agent+PromiseKit.podspec */; };
+		8A90A2AD193D5613001D7C92 /* AgentPromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A90A2A1193D5613001D7C92 /* AgentPromiseKit.framework */; };
+		8A90A2B4193D5613001D7C92 /* Agent+PromiseKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A90A2B3193D5613001D7C92 /* Agent+PromiseKitTests.swift */; };
+		B468F60DFDD5D3456DC319F1 /* Pods_Agent_PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C33556122B17CC3B7A98A3 /* Pods_Agent_PromiseKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +25,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8A16D93D1B3FECCE0002BD69 /* Agent.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Agent.podspec; sourceTree = "<group>"; };
-		8A90A2A1193D5613001D7C92 /* Agent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Agent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		253586761BCEE9AB00C7E11D /* Agent+PromiseKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Agent+PromiseKit.swift"; sourceTree = "<group>"; };
+		65C33556122B17CC3B7A98A3 /* Pods_Agent_PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Agent_PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A16D93D1B3FECCE0002BD69 /* Agent+PromiseKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Agent+PromiseKit.podspec"; sourceTree = "<group>"; };
+		8A90A2A1193D5613001D7C92 /* AgentPromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AgentPromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A90A2A5193D5613001D7C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A90A2AC193D5613001D7C92 /* AgentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A90A2AC193D5613001D7C92 /* AgentPromiseKit.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentPromiseKit.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A90A2B2193D5613001D7C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A90A2B3193D5613001D7C92 /* AgentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentTests.swift; sourceTree = "<group>"; };
-		8A90A2BF193D566E001D7C92 /* Agent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Agent.swift; path = ../../agent/Agent/Agent.swift; sourceTree = "<group>"; };
+		8A90A2B3193D5613001D7C92 /* Agent+PromiseKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Agent+PromiseKitTests.swift"; sourceTree = "<group>"; };
+		CE0924857761CF2BB9E9573D /* Pods-Agent+PromiseKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agent+PromiseKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Agent+PromiseKit/Pods-Agent+PromiseKit.release.xcconfig"; sourceTree = "<group>"; };
+		CF8F8E0894B8085FA717A619 /* Pods-Agent+PromiseKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Agent+PromiseKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Agent+PromiseKit/Pods-Agent+PromiseKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B468F60DFDD5D3456DC319F1 /* Pods_Agent_PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,38 +50,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A90A2AD193D5613001D7C92 /* Agent.framework in Frameworks */,
+				8A90A2AD193D5613001D7C92 /* AgentPromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FCE6F8A25B11C10E69656A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF8F8E0894B8085FA717A619 /* Pods-Agent+PromiseKit.debug.xcconfig */,
+				CE0924857761CF2BB9E9573D /* Pods-Agent+PromiseKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8A90A297193D5613001D7C92 = {
 			isa = PBXGroup;
 			children = (
-				8A16D93D1B3FECCE0002BD69 /* Agent.podspec */,
-				8A90A2A3193D5613001D7C92 /* Agent */,
+				8A16D93D1B3FECCE0002BD69 /* Agent+PromiseKit.podspec */,
+				8A90A2A3193D5613001D7C92 /* Agent+PromiseKit */,
 				8A90A2B0193D5613001D7C92 /* Tests */,
 				8A90A2A2193D5613001D7C92 /* Products */,
+				5FCE6F8A25B11C10E69656A0 /* Pods */,
+				C025FDB37BD726130F5B4187 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8A90A2A2193D5613001D7C92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A90A2A1193D5613001D7C92 /* Agent.framework */,
-				8A90A2AC193D5613001D7C92 /* AgentTests.xctest */,
+				8A90A2A1193D5613001D7C92 /* AgentPromiseKit.framework */,
+				8A90A2AC193D5613001D7C92 /* AgentPromiseKit.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8A90A2A3193D5613001D7C92 /* Agent */ = {
+		8A90A2A3193D5613001D7C92 /* Agent+PromiseKit */ = {
 			isa = PBXGroup;
 			children = (
-				8A90A2BF193D566E001D7C92 /* Agent.swift */,
+				253586761BCEE9AB00C7E11D /* Agent+PromiseKit.swift */,
 				8A90A2A4193D5613001D7C92 /* Supporting Files */,
 			);
+			name = "Agent+PromiseKit";
 			path = Agent;
 			sourceTree = "<group>";
 		};
@@ -91,7 +108,7 @@
 		8A90A2B0193D5613001D7C92 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8A90A2B3193D5613001D7C92 /* AgentTests.swift */,
+				8A90A2B3193D5613001D7C92 /* Agent+PromiseKitTests.swift */,
 				8A90A2B1193D5613001D7C92 /* Supporting Files */,
 			);
 			name = Tests;
@@ -104,6 +121,14 @@
 				8A90A2B2193D5613001D7C92 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C025FDB37BD726130F5B4187 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65C33556122B17CC3B7A98A3 /* Pods_Agent_PromiseKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,27 +144,29 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8A90A2A0193D5613001D7C92 /* Agent */ = {
+		8A90A2A0193D5613001D7C92 /* AgentPromiseKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A90A2B7193D5613001D7C92 /* Build configuration list for PBXNativeTarget "Agent" */;
+			buildConfigurationList = 8A90A2B7193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentPromiseKit" */;
 			buildPhases = (
+				28AEEA3C02B50D3524E86BDA /* Check Pods Manifest.lock */,
 				8A90A29C193D5613001D7C92 /* Sources */,
 				8A90A29D193D5613001D7C92 /* Frameworks */,
 				8A90A29E193D5613001D7C92 /* Headers */,
 				8A90A29F193D5613001D7C92 /* Resources */,
+				868F87203C6DB8B98596292A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Agent;
+			name = AgentPromiseKit;
 			productName = Agent;
-			productReference = 8A90A2A1193D5613001D7C92 /* Agent.framework */;
+			productReference = 8A90A2A1193D5613001D7C92 /* AgentPromiseKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8A90A2AB193D5613001D7C92 /* AgentTests */ = {
+		8A90A2AB193D5613001D7C92 /* AgentPromiseKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A90A2BA193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentTests" */;
+			buildConfigurationList = 8A90A2BA193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentPromiseKitTests" */;
 			buildPhases = (
 				8A90A2A8193D5613001D7C92 /* Sources */,
 				8A90A2A9193D5613001D7C92 /* Frameworks */,
@@ -150,9 +177,9 @@
 			dependencies = (
 				8A90A2AF193D5613001D7C92 /* PBXTargetDependency */,
 			);
-			name = AgentTests;
+			name = AgentPromiseKitTests;
 			productName = AgentTests;
-			productReference = 8A90A2AC193D5613001D7C92 /* AgentTests.xctest */;
+			productReference = 8A90A2AC193D5613001D7C92 /* AgentPromiseKit.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -161,6 +188,7 @@
 		8A90A298193D5613001D7C92 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Christoffer Hallas";
 				TargetAttributes = {
@@ -173,7 +201,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A90A29B193D5613001D7C92 /* Build configuration list for PBXProject "Agent" */;
+			buildConfigurationList = 8A90A29B193D5613001D7C92 /* Build configuration list for PBXProject "AgentPromiseKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -185,8 +213,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A90A2A0193D5613001D7C92 /* Agent */,
-				8A90A2AB193D5613001D7C92 /* AgentTests */,
+				8A90A2A0193D5613001D7C92 /* AgentPromiseKit */,
+				8A90A2AB193D5613001D7C92 /* AgentPromiseKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -196,7 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A16D93E1B3FECCE0002BD69 /* Agent.podspec in Resources */,
+				8A16D93E1B3FECCE0002BD69 /* Agent+PromiseKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,12 +237,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28AEEA3C02B50D3524E86BDA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		868F87203C6DB8B98596292A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Agent+PromiseKit/Pods-Agent+PromiseKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A90A29C193D5613001D7C92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A90A2C0193D566E001D7C92 /* Agent.swift in Sources */,
+				253586771BCEE9AB00C7E11D /* Agent+PromiseKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A90A2B4193D5613001D7C92 /* AgentTests.swift in Sources */,
+				8A90A2B4193D5613001D7C92 /* Agent+PromiseKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +292,7 @@
 /* Begin PBXTargetDependency section */
 		8A90A2AF193D5613001D7C92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A90A2A0193D5613001D7C92 /* Agent */;
+			target = 8A90A2A0193D5613001D7C92 /* AgentPromiseKit */;
 			targetProxy = 8A90A2AE193D5613001D7C92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -272,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -312,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -324,6 +385,7 @@
 		};
 		8A90A2B8193D5613001D7C92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF8F8E0894B8085FA717A619 /* Pods-Agent+PromiseKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -333,7 +395,8 @@
 				INFOPLIST_FILE = Agent/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kfarst.Agent-PromiseKit";
+				PRODUCT_NAME = AgentPromiseKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -341,6 +404,7 @@
 		};
 		8A90A2B9193D5613001D7C92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0924857761CF2BB9E9573D /* Pods-Agent+PromiseKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -350,7 +414,8 @@
 				INFOPLIST_FILE = Agent/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kfarst.Agent-PromiseKit";
+				PRODUCT_NAME = AgentPromiseKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -369,7 +434,7 @@
 				INFOPLIST_FILE = AgentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AgentPromiseKit;
 			};
 			name = Debug;
 		};
@@ -383,14 +448,14 @@
 				INFOPLIST_FILE = AgentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AgentPromiseKit;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A90A29B193D5613001D7C92 /* Build configuration list for PBXProject "Agent" */ = {
+		8A90A29B193D5613001D7C92 /* Build configuration list for PBXProject "AgentPromiseKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A90A2B5193D5613001D7C92 /* Debug */,
@@ -399,7 +464,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A90A2B7193D5613001D7C92 /* Build configuration list for PBXNativeTarget "Agent" */ = {
+		8A90A2B7193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentPromiseKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A90A2B8193D5613001D7C92 /* Debug */,
@@ -408,7 +473,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A90A2BA193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentTests" */ = {
+		8A90A2BA193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentPromiseKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A90A2BB193D5613001D7C92 /* Debug */,
