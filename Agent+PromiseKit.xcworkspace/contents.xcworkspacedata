@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/kfarst/projects/agent+promisekit/AgentPromiseKit.xcodeproj">
+      location = "group:/Users/kfarst/projects/agent+promisekit/Agent+PromiseKit.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

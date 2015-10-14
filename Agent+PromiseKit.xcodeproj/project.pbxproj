@@ -144,9 +144,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8A90A2A0193D5613001D7C92 /* AgentPromiseKit */ = {
+		8A90A2A0193D5613001D7C92 /* Agent+PromiseKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A90A2B7193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentPromiseKit" */;
+			buildConfigurationList = 8A90A2B7193D5613001D7C92 /* Build configuration list for PBXNativeTarget "Agent+PromiseKit" */;
 			buildPhases = (
 				28AEEA3C02B50D3524E86BDA /* Check Pods Manifest.lock */,
 				8A90A29C193D5613001D7C92 /* Sources */,
@@ -159,14 +159,14 @@
 			);
 			dependencies = (
 			);
-			name = AgentPromiseKit;
+			name = "Agent+PromiseKit";
 			productName = Agent;
 			productReference = 8A90A2A1193D5613001D7C92 /* AgentPromiseKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8A90A2AB193D5613001D7C92 /* AgentPromiseKitTests */ = {
+		8A90A2AB193D5613001D7C92 /* Agent+PromiseKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A90A2BA193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentPromiseKitTests" */;
+			buildConfigurationList = 8A90A2BA193D5613001D7C92 /* Build configuration list for PBXNativeTarget "Agent+PromiseKitTests" */;
 			buildPhases = (
 				8A90A2A8193D5613001D7C92 /* Sources */,
 				8A90A2A9193D5613001D7C92 /* Frameworks */,
@@ -177,7 +177,7 @@
 			dependencies = (
 				8A90A2AF193D5613001D7C92 /* PBXTargetDependency */,
 			);
-			name = AgentPromiseKitTests;
+			name = "Agent+PromiseKitTests";
 			productName = AgentTests;
 			productReference = 8A90A2AC193D5613001D7C92 /* AgentPromiseKit.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -190,7 +190,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = "Christoffer Hallas";
+				ORGANIZATIONNAME = "Kevin Farst";
 				TargetAttributes = {
 					8A90A2A0193D5613001D7C92 = {
 						CreatedOnToolsVersion = 6.0;
@@ -201,7 +201,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8A90A29B193D5613001D7C92 /* Build configuration list for PBXProject "AgentPromiseKit" */;
+			buildConfigurationList = 8A90A29B193D5613001D7C92 /* Build configuration list for PBXProject "Agent+PromiseKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -213,8 +213,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8A90A2A0193D5613001D7C92 /* AgentPromiseKit */,
-				8A90A2AB193D5613001D7C92 /* AgentPromiseKitTests */,
+				8A90A2A0193D5613001D7C92 /* Agent+PromiseKit */,
+				8A90A2AB193D5613001D7C92 /* Agent+PromiseKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,7 @@
 /* Begin PBXTargetDependency section */
 		8A90A2AF193D5613001D7C92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8A90A2A0193D5613001D7C92 /* AgentPromiseKit */;
+			target = 8A90A2A0193D5613001D7C92 /* Agent+PromiseKit */;
 			targetProxy = 8A90A2AE193D5613001D7C92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -455,7 +455,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A90A29B193D5613001D7C92 /* Build configuration list for PBXProject "AgentPromiseKit" */ = {
+		8A90A29B193D5613001D7C92 /* Build configuration list for PBXProject "Agent+PromiseKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A90A2B5193D5613001D7C92 /* Debug */,
@@ -464,7 +464,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A90A2B7193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentPromiseKit" */ = {
+		8A90A2B7193D5613001D7C92 /* Build configuration list for PBXNativeTarget "Agent+PromiseKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A90A2B8193D5613001D7C92 /* Debug */,
@@ -473,7 +473,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A90A2BA193D5613001D7C92 /* Build configuration list for PBXNativeTarget "AgentPromiseKitTests" */ = {
+		8A90A2BA193D5613001D7C92 /* Build configuration list for PBXNativeTarget "Agent+PromiseKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8A90A2BB193D5613001D7C92 /* Debug */,

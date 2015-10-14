@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8A90A2A0193D5613001D7C92"
-               BuildableName = "Agent-PromiseKit.framework"
-               BlueprintName = "AgentPromiseKit"
-               ReferencedContainer = "container:AgentPromiseKit.xcodeproj">
+               BuildableName = "AgentPromiseKit.framework"
+               BlueprintName = "Agent+PromiseKit"
+               ReferencedContainer = "container:Agent+PromiseKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8A90A2AB193D5613001D7C92"
-               BuildableName = "AgentPromiseKit.xctest"
-               BlueprintName = "AgentPromiseKitTests"
-               ReferencedContainer = "container:AgentPromiseKit.xcodeproj">
+               BuildableName = "Agent+PromiseKit.xctest"
+               BlueprintName = "Agent+PromiseKitTests"
+               ReferencedContainer = "container:Agent+PromiseKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A90A2A0193D5613001D7C92"
-            BuildableName = "Agent-PromiseKit.framework"
-            BlueprintName = "AgentPromiseKit"
-            ReferencedContainer = "container:AgentPromiseKit.xcodeproj">
+            BuildableName = "AgentPromiseKit.framework"
+            BlueprintName = "Agent+PromiseKit"
+            ReferencedContainer = "container:Agent+PromiseKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A90A2A0193D5613001D7C92"
-            BuildableName = "Agent-PromiseKit.framework"
-            BlueprintName = "AgentPromiseKit"
-            ReferencedContainer = "container:AgentPromiseKit.xcodeproj">
+            BuildableName = "AgentPromiseKit.framework"
+            BlueprintName = "Agent+PromiseKit"
+            ReferencedContainer = "container:Agent+PromiseKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8A90A2A0193D5613001D7C92"
-            BuildableName = "Agent-PromiseKit.framework"
-            BlueprintName = "AgentPromiseKit"
-            ReferencedContainer = "container:AgentPromiseKit.xcodeproj">
+            BuildableName = "AgentPromiseKit.framework"
+            BlueprintName = "Agent+PromiseKit"
+            ReferencedContainer = "container:Agent+PromiseKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

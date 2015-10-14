@@ -9,7 +9,7 @@
 import Foundation
 import PromiseKit
 
-public class Agent {
+public class AgentPromiseKit {
   
   public typealias Headers = Dictionary<String, String>
   public typealias Response = (NSHTTPURLResponse?, AnyObject?, NSError?) -> Void
@@ -50,7 +50,7 @@ public class Agent {
   * Request
   */
   
-  func request(method: String, path: String) -> Agent {
+  func request(method: String, path: String) -> AgentPromiseKit {
     var u: NSURL
     if self.base != nil {
       u = self.base!.URLByAppendingPathComponent(path)
@@ -72,20 +72,20 @@ public class Agent {
   * GET
   */
   
-  public class func get(url: String) -> Agent {
-    return Agent(method: "GET", url: url, headers: nil)
+  public class func get(url: String) -> AgentPromiseKit {
+    return AgentPromiseKit(method: "GET", url: url, headers: nil)
   }
   
-  public class func get(url: String, headers: Headers) -> Agent {
-    return Agent(method: "GET", url: url, headers: headers)
+  public class func get(url: String, headers: Headers) -> AgentPromiseKit {
+    return AgentPromiseKit(method: "GET", url: url, headers: headers)
   }
   
   public class func get(url: String) -> URLDataPromise {
-    return Agent.get(url).end()
+    return AgentPromiseKit.get(url).end()
   }
   
   public class func get(url: String, headers: Headers) -> URLDataPromise {
-    return Agent.get(url, headers: headers).end()
+    return AgentPromiseKit.get(url, headers: headers).end()
   }
   
   public func get(url: String) -> URLDataPromise {
@@ -96,32 +96,32 @@ public class Agent {
   * POST
   */
   
-  public class func post(url: String) -> Agent {
-    return Agent(method: "POST", url: url, headers: nil)
+  public class func post(url: String) -> AgentPromiseKit {
+    return AgentPromiseKit(method: "POST", url: url, headers: nil)
   }
   
-  public class func post(url: String, headers: Headers) -> Agent {
-    return Agent(method: "POST", url: url, headers: headers)
+  public class func post(url: String, headers: Headers) -> AgentPromiseKit {
+    return AgentPromiseKit(method: "POST", url: url, headers: headers)
   }
   
   public class func post(url: String) -> URLDataPromise {
-    return Agent.post(url).end()
+    return AgentPromiseKit.post(url).end()
   }
   
-  public class func post(url: String, headers: Headers, data: AnyObject) -> Agent {
-    return Agent.post(url, headers: headers).send(data)
+  public class func post(url: String, headers: Headers, data: AnyObject) -> AgentPromiseKit {
+    return AgentPromiseKit.post(url, headers: headers).send(data)
   }
   
-  public class func post(url: String, data: AnyObject) -> Agent {
-    return Agent.post(url).send(data)
+  public class func post(url: String, data: AnyObject) -> AgentPromiseKit {
+    return AgentPromiseKit.post(url).send(data)
   }
   
   public class func post(url: String, data: AnyObject) -> URLDataPromise {
-    return Agent.post(url, data: data).send(data).end()
+    return AgentPromiseKit.post(url, data: data).send(data).end()
   }
   
   public class func post(url: String, headers: Headers, data: AnyObject) -> URLDataPromise {
-    return Agent.post(url, headers: headers, data: data).send(data).end()
+    return AgentPromiseKit.post(url, headers: headers, data: data).send(data).end()
   }
   
   public func POST(url: String, data: AnyObject) -> URLDataPromise {
@@ -132,32 +132,32 @@ public class Agent {
   * PUT
   */
   
-  public class func put(url: String) -> Agent {
-    return Agent(method: "PUT", url: url, headers: nil)
+  public class func put(url: String) -> AgentPromiseKit {
+    return AgentPromiseKit(method: "PUT", url: url, headers: nil)
   }
   
-  public class func put(url: String, headers: Headers) -> Agent {
-    return Agent(method: "PUT", url: url, headers: headers)
+  public class func put(url: String, headers: Headers) -> AgentPromiseKit {
+    return AgentPromiseKit(method: "PUT", url: url, headers: headers)
   }
   
   public class func put(url: String) -> URLDataPromise {
-    return Agent.put(url).end()
+    return AgentPromiseKit.put(url).end()
   }
   
-  public class func put(url: String, headers: Headers, data: AnyObject) -> Agent {
-    return Agent.put(url, headers: headers).send(data)
+  public class func put(url: String, headers: Headers, data: AnyObject) -> AgentPromiseKit {
+    return AgentPromiseKit.put(url, headers: headers).send(data)
   }
   
-  public class func put(url: String, data: AnyObject) -> Agent {
-    return Agent.put(url).send(data)
+  public class func put(url: String, data: AnyObject) -> AgentPromiseKit {
+    return AgentPromiseKit.put(url).send(data)
   }
   
   public class func put(url: String, data: AnyObject) -> URLDataPromise {
-    return Agent.put(url, data: data).send(data).end()
+    return AgentPromiseKit.put(url, data: data).send(data).end()
   }
   
   public class func put(url: String, headers: Headers, data: AnyObject) -> URLDataPromise {
-    return Agent.put(url, headers: headers, data: data).send(data).end()
+    return AgentPromiseKit.put(url, headers: headers, data: data).send(data).end()
   }
   
   public func PUT(url: String, data: AnyObject) -> URLDataPromise {
@@ -168,20 +168,20 @@ public class Agent {
   * DELETE
   */
   
-  public class func delete(url: String) -> Agent {
-    return Agent(method: "DELETE", url: url, headers: nil)
+  public class func delete(url: String) -> AgentPromiseKit {
+    return AgentPromiseKit(method: "DELETE", url: url, headers: nil)
   }
   
-  public class func delete(url: String, headers: Headers) -> Agent {
-    return Agent(method: "DELETE", url: url, headers: headers)
+  public class func delete(url: String, headers: Headers) -> AgentPromiseKit {
+    return AgentPromiseKit(method: "DELETE", url: url, headers: headers)
   }
   
   public class func delete(url: String) -> URLDataPromise {
-    return Agent.delete(url).end()
+    return AgentPromiseKit.delete(url).end()
   }
   
   public class func delete(url: String, headers: Headers) -> URLDataPromise {
-    return Agent.delete(url, headers: headers).end()
+    return AgentPromiseKit.delete(url, headers: headers).end()
   }
   
   public func delete(url: String) -> URLDataPromise {
@@ -192,13 +192,13 @@ public class Agent {
   * Methods
   */
   
-  public func data(data: NSData?, mime: String) -> Agent {
+  public func data(data: NSData?, mime: String) -> AgentPromiseKit {
     self.set("Content-Type", value: mime)
     self.request!.HTTPBody = data
     return self
   }
   
-  public func send(data: AnyObject) -> Agent {
+  public func send(data: AnyObject) -> AgentPromiseKit {
     do {
       let json = try NSJSONSerialization.dataWithJSONObject(data, options: NSJSONWritingOptions())
       return self.data(json, mime: "application/json")
@@ -207,7 +207,7 @@ public class Agent {
     }
   }
   
-  public func set(header: String, value: String) -> Agent {
+  public func set(header: String, value: String) -> AgentPromiseKit {
     self.request!.setValue(value, forHTTPHeaderField: header)
     return self
   }
